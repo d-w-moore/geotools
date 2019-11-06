@@ -1,0 +1,7 @@
+FROM epicbanzai
+
+ENV OLD_HOSTNAME='71e74d7a7857'
+
+USER jovyan
+
+CMD ["/bin/bash"]

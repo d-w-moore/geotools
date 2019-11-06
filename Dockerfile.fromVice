@@ -1,0 +1,15 @@
+FROM cyversevice/jupyterlab-scipy:latest
+
+MAINTAINER Tyson Swetnam <tswetnam@cyverse.org>
+
+USER root
+COPY environment.yml /environment.yml
+RUN /opt/conda/bin/conda env update -n root -f /environment.yml
+
+#RUN conda info --envs
+#RUN conda list
+#RUN python -c "import rasterio"
+#RUN python -c "import earthpy"
+#RUN rm environment.yml
+USER jovyan
+CMD [ "/bin/bash" ]
